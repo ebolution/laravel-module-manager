@@ -1,0 +1,28 @@
+{
+    "name": "ebolution/laravel-module-manager",
+    "description": "Add modular development features to Laravel",
+    "minimum-stability": "stable",
+    "version": "1.0.0",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Avanzed Cloud Develop S.L.",
+            "email": "desarrollo@ebolution.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ebolution\\ModuleManager\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ebolution\\ModuleManager\\Infrastructure\\ServicesProvider"
+            ]
+        }
+    }
+}
