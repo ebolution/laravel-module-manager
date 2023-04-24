@@ -2,7 +2,7 @@
     "name": "ebolution/laravel-module-manager",
     "description": "Add modular development features to Laravel",
     "minimum-stability": "stable",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "license": "MIT",
     "authors": [
         {
