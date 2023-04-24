@@ -44,7 +44,7 @@ class RouteServicesProvider extends CoreRouteServiceProvider
         }
 
         $this->routes(function () {
-            return static::BASE_PATH . DIRECTORY_SEPARATOR . '../Routes/Web.php';
+            require_once(static::BASE_PATH . DIRECTORY_SEPARATOR . '../Routes/Web.php');
         });
     }
 }
