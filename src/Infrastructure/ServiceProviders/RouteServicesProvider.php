@@ -16,8 +16,8 @@ class RouteServicesProvider extends CoreRouteServiceProvider
 {
     const BASE_PATH = __DIR__;
 
-    private bool $loadApi = true;
-    private bool $loadWeb = false;
+    protected bool $loadApi = true;
+    protected bool $loadWeb = false;
 
     public function boot()
     {
