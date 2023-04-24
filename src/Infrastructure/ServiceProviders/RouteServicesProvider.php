@@ -22,6 +22,7 @@ class RouteServicesProvider extends CoreRouteServiceProvider
     public function boot()
     {
         $this->loadApi();
+        $this->loadWeb();
     }
 
     private function loadApi()
