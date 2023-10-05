@@ -21,31 +21,16 @@ class RouteServicesProvider extends CoreRouteServiceProvider
 
     public function boot()
     {
-        $this->loadApi();
-        $this->loadWeb();
-    }
-
-    private function loadApi()
-    {
-        if (! $this->loadApi) {
-            return;
-        }
-
         $this->routes(function () {
-            Route::middleware('api')
-                ->prefix('api')
-                ->group(static::BASE_PATH . DIRECTORY_SEPARATOR . '../Routes/Api.php');
-        });
-    }
+            if ($this->loadApi) {
+                Route::middleware('api')
+                    ->prefix('api')
+                    ->group(static::BASE_PATH . DIRECTORY_SEPARATOR . '../Routes/Api.php');
+            }
 
-    private function loadWeb()
-    {
-        if (! $this->loadWeb) {
-            return;
-        }
-
-        $this->routes(function () {
-            require_once(static::BASE_PATH . DIRECTORY_SEPARATOR . '../Routes/Web.php');
+            if ($this->loadWeb) {
+                require_once(static::BASE_PATH . DIRECTORY_SEPARATOR . '../Routes/Web.php');
+            }
         });
     }
 }
